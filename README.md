@@ -26,26 +26,17 @@ CHINA, 410083
 Computational drug repositioning
 =================
 
+1.Dataset.
 
-1)Dataset.
+1) DrugSimMat and DiseaseSimMat store drug similarity matrix and disease similarity matrix, respectively;
+2) DiDrAMat stores known disease-drug association information;
+3) DrugsName and DiseasesName store drug ids and disease ids, respectively;
+4) For each drug pair, the number of their sharing common diseases is stored in shareWrr.mat;
+5) For each disease pair, the number of their sharing common drugs is stored in shareWdd.mat;
+6) CDataSets store the combined datasets;
 
-EPGA is written C++ and therefore will require a machine with GNU C++ pre-installed.
-
-Create a main directory (eg:EPGA). Copy all source code to this directory.
-
-Run command line: g++ main.cpp -o epga -lpthread
-
-2)Running.
-
-./epga libraryName insertsize sd libraryName1 insertsize1 sd1 kmerLength threadNumber
-
-libraryName is paired-end reads file name in Fasta format (eg: read1.fa). Paired-end reads are in single file. Left mate read and right mate read stored in file one by one.(For mate-paired reads, please transform them to paired-end reads.)
-
-insertsize is the sequence fragment length about paired-end reads (eg: 500).
-
-sd is the standard deviation of insertsize.
-
-kmerLength is one integer shorter than read length which is used for building De Bruijn graph.
-
-threadNumber is thread number of program.
-
+2.Code.
+1) normFun.m: function implementing normalization;
+2) setparFun.m: function analyzing similarity network;
+3) nManiCluester.m : function implementing cluster operation by calling cluster_one-1.0;
+4) MBiRW: predict potential indications for drugs;
