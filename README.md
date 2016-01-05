@@ -30,15 +30,24 @@ MBiRW is one novel computational method, which utilizes comprehensive similarity
 1.Dataset.
 
 1) DrugSimMat and DiseaseSimMat store drug similarity matrix and disease similarity matrix, respectively;
+
 2) DiDrAMat stores known disease-drug association information;
+
 3) DrugsName and DiseasesName store drug ids and disease ids, respectively;
+
 4) For each drug pair, the number of their sharing common diseases is stored in shareWrr.mat;
+
 5) For each disease pair, the number of their sharing common drugs is stored in shareWdd.mat;
+
 6) CDataSets store the combined datasets;
 
 2.Code.
 1) normFun.m: function implementing normalization;
+
 2) setparFun.m: function analyzing similarity network;
+
 3) nManiCluester.m : function implementing cluster operation by calling cluster_one-1.0;
+
 4) MBiRW: predict potential indications for drugs; 
+
 All files of Dataset and Code should be stored in the same folder to run MBiRW.
