@@ -39,7 +39,7 @@ MBiRW is one novel computational method, which utilizes comprehensive similarity
 
 5) For each disease pair, the number of their sharing common drugs is stored in shareWdd.mat;
 
-6) CDataSets store the combined datasets;
+6) CDataSets store the combined datasets; Datasets_indep store the independent dataset.
 
 2.Code.
 1) normFun.m: function implementing normalization;
